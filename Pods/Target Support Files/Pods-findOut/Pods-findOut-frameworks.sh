@@ -87,17 +87,21 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
   install_framework "$BUILT_PRODUCTS_DIR/HockeySDK-Source/HockeySDK_Source.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KeychainSwift/KeychainSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxCocoa/RxCocoa.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxDataSources/RxDataSources.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/VK-ios-sdk/VK_ios_sdk.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
   install_framework "$BUILT_PRODUCTS_DIR/HockeySDK-Source/HockeySDK_Source.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KeychainSwift/KeychainSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxCocoa/RxCocoa.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxDataSources/RxDataSources.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/VK-ios-sdk/VK_ios_sdk.framework"
 fi

@@ -7,6 +7,12 @@ use_frameworks!
 
 target ‘findOut’ do
 
+    # SDK Вконтакте, может стоит написать свою.
+    pod "VK-ios-sdk" 
+
+    # Для маппинга ответов Вконтакте
+    pod 'ObjectMapper', '~> 2.0'
+
     # Доступ к связке ключей для хранения токенов доступа
     pod 'KeychainSwift', '~> 7.0'
     
