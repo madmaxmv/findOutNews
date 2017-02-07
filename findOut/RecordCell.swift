@@ -9,8 +9,6 @@
 import UIKit
 import Async
 
-struct EmptyURLError: Error {}
-
 class RecordCell: UITableViewCell {
     
     struct Model {
