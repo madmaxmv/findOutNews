@@ -23,7 +23,7 @@ class RecordsView: UIView {
         model = viewModel
         
         tableView.register(RecordCell.self)
-        tableView.estimatedRowHeight = 250
+        tableView.estimatedRowHeight = 400
         tableView.rowHeight = UITableViewAutomaticDimension
         
         //--------------------------------------------------------------

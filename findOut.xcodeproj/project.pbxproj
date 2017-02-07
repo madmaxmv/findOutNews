@@ -36,6 +36,9 @@
 		948AE8F91E47C0F70080B0DD /* RecordsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE8F81E47C0F70080B0DD /* RecordsScrollView.swift */; };
 		948AE8FB1E47C1D80080B0DD /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948AE8FA1E47C1D80080B0DD /* RecordView.swift */; };
 		948AE8FD1E47C1EE0080B0DD /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948AE8FC1E47C1EE0080B0DD /* RecordView.xib */; };
+		948C422E1E4A496E00CDA4A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C422D1E4A496E00CDA4A6 /* LoginViewController.swift */; };
+		948C42311E4A498D00CDA4A6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C42301E4A498D00CDA4A6 /* LoginView.swift */; };
+		948C42331E4A499A00CDA4A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948C42321E4A499A00CDA4A6 /* Login.storyboard */; };
 		949A870C1E48DEBB004CB2AE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A870B1E48DEBB004CB2AE /* ContainerViewController.swift */; };
 		949A87141E48E0B9004CB2AE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A87131E48E0B9004CB2AE /* MenuViewController.swift */; };
 		949A87161E48E652004CB2AE /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949A87151E48E652004CB2AE /* Menu.storyboard */; };
@@ -81,6 +84,9 @@
 		948AE8F81E47C0F70080B0DD /* RecordsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsScrollView.swift; sourceTree = "<group>"; };
 		948AE8FA1E47C1D80080B0DD /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		948AE8FC1E47C1EE0080B0DD /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
+		948C422D1E4A496E00CDA4A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		948C42301E4A498D00CDA4A6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		948C42321E4A499A00CDA4A6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		949A870B1E48DEBB004CB2AE /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		949A87131E48E0B9004CB2AE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		949A87151E48E652004CB2AE /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				949A870B1E48DEBB004CB2AE /* ContainerViewController.swift */,
+				948C422C1E4A494B00CDA4A6 /* Login */,
 				949A87111E48E095004CB2AE /* Menu */,
 				947F171B1E465C98007983DA /* Records */,
 			);
@@ -260,6 +267,24 @@
 				9482B8521E45152200FDB398 /* Info.plist */,
 			);
 			path = findOut;
+			sourceTree = "<group>";
+		};
+		948C422C1E4A494B00CDA4A6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				948C422F1E4A497C00CDA4A6 /* View */,
+				948C422D1E4A496E00CDA4A6 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		948C422F1E4A497C00CDA4A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				948C42301E4A498D00CDA4A6 /* LoginView.swift */,
+				948C42321E4A499A00CDA4A6 /* Login.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		949A87111E48E095004CB2AE /* Menu */ = {
@@ -364,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948C42331E4A499A00CDA4A6 /* Login.storyboard in Resources */,
 				948AE8FD1E47C1EE0080B0DD /* RecordView.xib in Resources */,
 				941E4E561E466E0C00A8863C /* RecordCell.xib in Resources */,
 				9482B8511E45152200FDB398 /* LaunchScreen.storyboard in Resources */,
@@ -441,6 +467,7 @@
 				949A871A1E48E8A4004CB2AE /* GroupCell.swift in Sources */,
 				948AE8F91E47C0F70080B0DD /* RecordsScrollView.swift in Sources */,
 				944732F31E46496B009A0D59 /* URLTransform.swift in Sources */,
+				948C422E1E4A496E00CDA4A6 /* LoginViewController.swift in Sources */,
 				944732E01E460B92009A0D59 /* VKCommentsInfo.swift in Sources */,
 				944732E61E4616C8009A0D59 /* VKLikesInfo.swift in Sources */,
 				947F171E1E465CEE007983DA /* RecordsModel.swift in Sources */,
@@ -458,6 +485,7 @@
 				949A87141E48E0B9004CB2AE /* MenuViewController.swift in Sources */,
 				941E4E5D1E467E7B00A8863C /* NibLoadableView.swift in Sources */,
 				944732D61E45E89B009A0D59 /* VKService.swift in Sources */,
+				948C42311E4A498D00CDA4A6 /* LoginView.swift in Sources */,
 				948AE8FB1E47C1D80080B0DD /* RecordView.swift in Sources */,
 				944732E81E463B4E009A0D59 /* VKRepostsInfo.swift in Sources */,
 			);

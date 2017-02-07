@@ -25,8 +25,17 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var repostsCountLabel: UILabel!
     @IBOutlet weak var likesCountLabel: UILabel!
     
+    @IBOutlet weak var titleLabelHeight: NSLayoutConstraint!
+    
     public func setup(for data: Model) {
-        titleLabel.text = data.title
+        
+        if !data.title.isEmpty {
+            titleLabel.text = data.title
+            titleLabelHeight.constant = 80
+        } else {
+            titleLabelHeight.constant = 0
+        }
+        
         if let url = data.url {
             Async.background {
                 do {
@@ -37,6 +46,8 @@ class RecordCell: UITableViewCell {
                 }
             }
         }
+        
+        cellContentView.layer.cornerRadius = 10
         
         repostsCountLabel.text = data.repostsCount.description
         likesCountLabel.text = data.likesCount.description
