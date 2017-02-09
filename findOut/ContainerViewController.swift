@@ -28,7 +28,6 @@ class ContainerViewController: UIViewController {
     
     private lazy var _recordsViewController: UINavigationController? = {
         return UIStoryboard(name: "Records", bundle: nil).instantiateViewController(withIdentifier: "RecordsNavigationController") as? UINavigationController
-        //instantiateViewController(withIdentifier: "RecordsViewController") as? RecordsViewController
     }()
     
     var recordsViewController: UINavigationController!
@@ -48,7 +47,6 @@ class ContainerViewController: UIViewController {
         
         recordsViewController = _recordsViewController
 
-        
         view.addSubview(recordsViewController.view)
         addChildViewController(recordsViewController)
         

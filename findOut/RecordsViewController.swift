@@ -10,15 +10,12 @@ import UIKit
 import RxSwift
 
 class RecordsViewController: UIViewController {
-    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     private let model = RecordsModel()
     
     private var recordsView: RecordsView {
         return view as! RecordsView
     }
-    
-    public weak var delegate: SidePanelViewControllerDelegate?
     
     private let disposeBag = DisposeBag()
     

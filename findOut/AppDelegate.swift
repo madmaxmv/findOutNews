@@ -14,12 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        VKSdk.initialize(withAppId: "qwerty").register(self)
-        let containerViewController = ContainerViewController()
         
-        window!.rootViewController = containerViewController
+        
+        let firstViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() //ContainerViewController()
+        
+        window!.rootViewController = firstViewController
         window!.makeKeyAndVisible()
         
 //        VKSdk.wakeUpSession(["messages"]) { state, error in
@@ -43,19 +43,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
-extension AppDelegate: VKSdkDelegate {
-    
-    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        if let token = result.token {
-            print(token)
-        } else {
-            print("Fuck, why are you so stuped")
-        }
-    }
-    
-    func vkSdkUserAuthorizationFailed() {
-        print("Fuck, vk Sdk User Authorization Failed")
-    }
-}
-

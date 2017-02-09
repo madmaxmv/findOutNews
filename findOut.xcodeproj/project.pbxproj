@@ -47,6 +47,8 @@
 		949A871D1E48EA95004CB2AE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A871C1E48EA95004CB2AE /* MenuView.swift */; };
 		949A871F1E48EB76004CB2AE /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A871E1E48EB76004CB2AE /* MenuModel.swift */; };
 		949A87211E48EE94004CB2AE /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A87201E48EE94004CB2AE /* MenuViewModel.swift */; };
+		94CE3F7C1E4A61BE004CF9FC /* ThrottleTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE3F7B1E4A61BE004CF9FC /* ThrottleTap.swift */; };
+		94CE3F7E1E4A6310004CF9FC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE3F7D1E4A6310004CF9FC /* LoginService.swift */; };
 		94ED000C1E471F20008BA7A3 /* VKPostedPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED000B1E471F20008BA7A3 /* VKPostedPhoto.swift */; };
 		94ED000E1E476E38008BA7A3 /* VKDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED000D1E476E38008BA7A3 /* VKDoc.swift */; };
 /* End PBXBuildFile section */
@@ -78,9 +80,9 @@
 		9482B8461E45152200FDB398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9482B8481E45152200FDB398 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		9482B84B1E45152200FDB398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Records.storyboard; sourceTree = "<group>"; };
-		9482B84D1E45152200FDB398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9482B84D1E45152200FDB398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = findOut/Assets.xcassets; sourceTree = "<group>"; };
 		9482B8501E45152200FDB398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9482B8521E45152200FDB398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9482B8521E45152200FDB398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = findOut/Info.plist; sourceTree = "<group>"; };
 		948AE8F81E47C0F70080B0DD /* RecordsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsScrollView.swift; sourceTree = "<group>"; };
 		948AE8FA1E47C1D80080B0DD /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		948AE8FC1E47C1EE0080B0DD /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		949A871C1E48EA95004CB2AE /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		949A871E1E48EB76004CB2AE /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		949A87201E48EE94004CB2AE /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		94CE3F7B1E4A61BE004CF9FC /* ThrottleTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrottleTap.swift; sourceTree = "<group>"; };
+		94CE3F7D1E4A6310004CF9FC /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		94ED000B1E471F20008BA7A3 /* VKPostedPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKPostedPhoto.swift; sourceTree = "<group>"; };
 		94ED000D1E476E38008BA7A3 /* VKDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKDoc.swift; sourceTree = "<group>"; };
 		9EDAB7E963B76FA9D6F28122 /* Pods-findOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-findOut/Pods-findOut.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			children = (
 				941E4E5A1E467E2E00A8863C /* ReusableView.swift */,
 				941E4E5C1E467E7B00A8863C /* NibLoadableView.swift */,
+				94CE3F7B1E4A61BE004CF9FC /* ThrottleTap.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -144,16 +149,15 @@
 			isa = PBXGroup;
 			children = (
 				944732D51E45E89B009A0D59 /* VKService.swift */,
+				94CE3F7D1E4A6310004CF9FC /* LoginService.swift */,
 			);
 			name = Services;
-			path = findOut;
 			sourceTree = "<group>";
 		};
 		944732D71E460589009A0D59 /* VK */ = {
 			isa = PBXGroup;
 			children = (
 				944732D81E4605A0009A0D59 /* Models */,
-				944732D41E45E887009A0D59 /* Services */,
 			);
 			name = VK;
 			sourceTree = "<group>";
@@ -208,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				949A870B1E48DEBB004CB2AE /* ContainerViewController.swift */,
+				94CE3F7A1E4A4DC3004CF9FC /* Launch */,
 				948C422C1E4A494B00CDA4A6 /* Login */,
 				949A87111E48E095004CB2AE /* Menu */,
 				947F171B1E465C98007983DA /* Records */,
@@ -259,12 +264,11 @@
 		9482B8451E45152200FDB398 /* findOut */ = {
 			isa = PBXGroup;
 			children = (
+				944732D41E45E887009A0D59 /* Services */,
+				94CE3F791E4A4D6D004CF9FC /* Supporting Files */,
 				941E4E591E467DF700A8863C /* Common */,
 				947F171A1E465C86007983DA /* Modules */,
 				9482B8461E45152200FDB398 /* AppDelegate.swift */,
-				9482B84D1E45152200FDB398 /* Assets.xcassets */,
-				9482B84F1E45152200FDB398 /* LaunchScreen.storyboard */,
-				9482B8521E45152200FDB398 /* Info.plist */,
 			);
 			path = findOut;
 			sourceTree = "<group>";
@@ -315,6 +319,24 @@
 				949A87171E48E6EB004CB2AE /* GroupCell.xib */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		94CE3F791E4A4D6D004CF9FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9482B84D1E45152200FDB398 /* Assets.xcassets */,
+				9482B8521E45152200FDB398 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		94CE3F7A1E4A4DC3004CF9FC /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9482B84F1E45152200FDB398 /* LaunchScreen.storyboard */,
+			);
+			name = Launch;
 			sourceTree = "<group>";
 		};
 		F95E70A8500AAFC013F1A963 /* Pods */ = {
@@ -466,6 +488,7 @@
 				944732E21E461384009A0D59 /* TimeStampTransform.swift in Sources */,
 				949A871A1E48E8A4004CB2AE /* GroupCell.swift in Sources */,
 				948AE8F91E47C0F70080B0DD /* RecordsScrollView.swift in Sources */,
+				94CE3F7C1E4A61BE004CF9FC /* ThrottleTap.swift in Sources */,
 				944732F31E46496B009A0D59 /* URLTransform.swift in Sources */,
 				948C422E1E4A496E00CDA4A6 /* LoginViewController.swift in Sources */,
 				944732E01E460B92009A0D59 /* VKCommentsInfo.swift in Sources */,
@@ -481,6 +504,7 @@
 				947F17201E465D19007983DA /* RecordsView.swift in Sources */,
 				944732EF1E4645D1009A0D59 /* VKPhoto.swift in Sources */,
 				94ED000E1E476E38008BA7A3 /* VKDoc.swift in Sources */,
+				94CE3F7E1E4A6310004CF9FC /* LoginService.swift in Sources */,
 				944732DA1E4605D2009A0D59 /* VKGetWallResponse.swift in Sources */,
 				949A87141E48E0B9004CB2AE /* MenuViewController.swift in Sources */,
 				941E4E5D1E467E7B00A8863C /* NibLoadableView.swift in Sources */,

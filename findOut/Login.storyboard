@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7wI-Wj-yeC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="yRM-Vj-6AF">
             <objects>
-                <viewController id="7wI-Wj-yeC" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController" id="7wI-Wj-yeC" customClass="LoginViewController" customModule="findOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l4M-rW-iDO"/>
                         <viewControllerLayoutGuide type="bottom" id="fbL-B6-hj8"/>
@@ -20,12 +20,70 @@
                     <view key="view" contentMode="scaleToFill" id="Bb9-hj-Sg3" customClass="LoginView" customModule="findOut" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Egg" translatesAutoresizingMaskIntoConstraints="NO" id="eAr-Ll-p0w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzB-37-dLq">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cq-wa-BjG">
+                                        <rect key="frame" x="12" y="30" width="351" height="50"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="V0v-ou-wxI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                        <state key="normal" title="Войти через Вкотнакте"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeM-mV-Z1a">
+                                        <rect key="frame" x="12" y="110" width="351" height="50"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="w5G-bz-C4g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                        <state key="normal" title="Позжее...">
+                                            <color key="titleColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oeM-mV-Z1a" firstAttribute="trailing" secondItem="0Cq-wa-BjG" secondAttribute="trailing" id="6Fm-Ne-xGN"/>
+                                    <constraint firstItem="oeM-mV-Z1a" firstAttribute="leading" secondItem="0Cq-wa-BjG" secondAttribute="leading" id="Bm4-c8-xYe"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Cq-wa-BjG" secondAttribute="trailing" constant="12" id="Hbu-g4-JrF"/>
+                                    <constraint firstItem="0Cq-wa-BjG" firstAttribute="centerX" secondItem="fzB-37-dLq" secondAttribute="centerX" id="PRJ-dU-OyN"/>
+                                    <constraint firstItem="oeM-mV-Z1a" firstAttribute="top" secondItem="0Cq-wa-BjG" secondAttribute="bottom" constant="30" id="erU-FL-lB3"/>
+                                    <constraint firstItem="oeM-mV-Z1a" firstAttribute="centerX" secondItem="fzB-37-dLq" secondAttribute="centerX" id="fKs-vQ-JaS"/>
+                                    <constraint firstItem="0Cq-wa-BjG" firstAttribute="top" secondItem="fzB-37-dLq" secondAttribute="top" constant="30" id="mds-0L-Ce6"/>
+                                    <constraint firstAttribute="height" constant="200" id="njG-M9-NEP"/>
+                                    <constraint firstAttribute="bottom" secondItem="oeM-mV-Z1a" secondAttribute="bottom" constant="40" id="xFR-12-KYx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fzB-37-dLq" firstAttribute="leading" secondItem="Bb9-hj-Sg3" secondAttribute="leading" id="DPc-yM-lM9"/>
+                            <constraint firstAttribute="trailing" secondItem="fzB-37-dLq" secondAttribute="trailing" id="V5G-1w-x0y"/>
+                            <constraint firstItem="eAr-Ll-p0w" firstAttribute="top" secondItem="Bb9-hj-Sg3" secondAttribute="top" id="Y35-YA-TgD"/>
+                            <constraint firstItem="fbL-B6-hj8" firstAttribute="top" secondItem="eAr-Ll-p0w" secondAttribute="bottom" id="k77-09-wv4"/>
+                            <constraint firstItem="eAr-Ll-p0w" firstAttribute="leading" secondItem="Bb9-hj-Sg3" secondAttribute="leading" id="qUh-Xu-k1r"/>
+                            <constraint firstAttribute="trailing" secondItem="eAr-Ll-p0w" secondAttribute="trailing" id="rHI-ur-CvQ"/>
+                            <constraint firstItem="fbL-B6-hj8" firstAttribute="top" secondItem="fzB-37-dLq" secondAttribute="bottom" id="zuS-9t-WK8"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="ignoreButton" destination="oeM-mV-Z1a" id="lEs-VX-h4G"/>
+                            <outlet property="loginButton" destination="0Cq-wa-BjG" id="hKk-2j-SXM"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Trp-27-DpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="144"/>
+            <point key="canvasLocation" x="104.8" y="143.47826086956522"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Egg" width="750" height="1334"/>
+    </resources>
 </document>
