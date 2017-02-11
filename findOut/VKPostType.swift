@@ -6,7 +6,7 @@
 //  Copyright © 2017 Personal. All rights reserved.
 //
 
-enum VKPostType: String {
+public enum VKPostType: String {
     case post     = "post"
     case copy     = "copy"
     case reply    = "reply"

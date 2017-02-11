@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-struct VKWallRecord: ImmutableMappable {
+public struct VKWallRecord: ImmutableMappable {
     
     /// идентификатор записи.
     public let id: Int

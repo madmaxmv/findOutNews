@@ -13,7 +13,11 @@ struct Group {
 
 class MenuModel {
     public static let instance = MenuModel()
-    private init() {}
+    private init() {
+        VKService.instance.getGroupInfo { info in
+            
+        }
+    }
     
     public var groups = [
         Group(name: "Вконтакте dev", isSelected: false),

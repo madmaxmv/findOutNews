@@ -9,7 +9,7 @@
 import ObjectMapper
 
 /// информация о репостах записи («Рассказать друзьям»)
-struct VKRepostsInfo: ImmutableMappable {
+public struct VKRepostsInfo: ImmutableMappable {
     
     /// число пользователей, скопировавших запись
     public let count: Int

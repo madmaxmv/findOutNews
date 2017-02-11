@@ -14,7 +14,7 @@
 		941E4E5B1E467E2E00A8863C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941E4E5A1E467E2E00A8863C /* ReusableView.swift */; };
 		941E4E5D1E467E7B00A8863C /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941E4E5C1E467E7B00A8863C /* NibLoadableView.swift */; };
 		944732D61E45E89B009A0D59 /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732D51E45E89B009A0D59 /* VKService.swift */; };
-		944732DA1E4605D2009A0D59 /* VKGetWallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732D91E4605D2009A0D59 /* VKGetWallResponse.swift */; };
+		944732DA1E4605D2009A0D59 /* VKWallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732D91E4605D2009A0D59 /* VKWallResponse.swift */; };
 		944732DC1E460685009A0D59 /* VKWallRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732DB1E460685009A0D59 /* VKWallRecord.swift */; };
 		944732DE1E460853009A0D59 /* VKWallAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732DD1E460853009A0D59 /* VKWallAttachment.swift */; };
 		944732E01E460B92009A0D59 /* VKCommentsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732DF1E460B92009A0D59 /* VKCommentsInfo.swift */; };
@@ -26,6 +26,7 @@
 		944732EF1E4645D1009A0D59 /* VKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732EE1E4645D1009A0D59 /* VKPhoto.swift */; };
 		944732F11E46491B009A0D59 /* VKLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732F01E46491B009A0D59 /* VKLink.swift */; };
 		944732F31E46496B009A0D59 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944732F21E46496B009A0D59 /* URLTransform.swift */; };
+		9454D82C1E4FBFFD0019355D /* VKGroupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454D82B1E4FBFFD0019355D /* VKGroupRequest.swift */; };
 		947F171E1E465CEE007983DA /* RecordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F171D1E465CEE007983DA /* RecordsModel.swift */; };
 		947F17201E465D19007983DA /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F171F1E465D19007983DA /* RecordsView.swift */; };
 		9482B8471E45152200FDB398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482B8461E45152200FDB398 /* AppDelegate.swift */; };
@@ -49,6 +50,10 @@
 		949A87211E48EE94004CB2AE /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A87201E48EE94004CB2AE /* MenuViewModel.swift */; };
 		94CE3F7C1E4A61BE004CF9FC /* ThrottleTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE3F7B1E4A61BE004CF9FC /* ThrottleTap.swift */; };
 		94CE3F7E1E4A6310004CF9FC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE3F7D1E4A6310004CF9FC /* LoginService.swift */; };
+		94DE011C1E4FC50F0069AABE /* VKGroupRsponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE011B1E4FC50F0069AABE /* VKGroupRsponse.swift */; };
+		94E9BB711E4FAF5A007AC489 /* VKGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9BB701E4FAF5A007AC489 /* VKGroup.swift */; };
+		94E9BB731E4FB5ED007AC489 /* VKGroupMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9BB721E4FB5ED007AC489 /* VKGroupMembers.swift */; };
+		94E9BB751E4FB840007AC489 /* VKWallRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9BB741E4FB840007AC489 /* VKWallRequest.swift */; };
 		94ED000C1E471F20008BA7A3 /* VKPostedPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED000B1E471F20008BA7A3 /* VKPostedPhoto.swift */; };
 		94ED000E1E476E38008BA7A3 /* VKDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED000D1E476E38008BA7A3 /* VKDoc.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +67,7 @@
 		941E4E5A1E467E2E00A8863C /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		941E4E5C1E467E7B00A8863C /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		944732D51E45E89B009A0D59 /* VKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
-		944732D91E4605D2009A0D59 /* VKGetWallResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKGetWallResponse.swift; sourceTree = "<group>"; };
+		944732D91E4605D2009A0D59 /* VKWallResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKWallResponse.swift; sourceTree = "<group>"; };
 		944732DB1E460685009A0D59 /* VKWallRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKWallRecord.swift; sourceTree = "<group>"; };
 		944732DD1E460853009A0D59 /* VKWallAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKWallAttachment.swift; sourceTree = "<group>"; };
 		944732DF1E460B92009A0D59 /* VKCommentsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKCommentsInfo.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		944732EE1E4645D1009A0D59 /* VKPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKPhoto.swift; sourceTree = "<group>"; };
 		944732F01E46491B009A0D59 /* VKLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKLink.swift; sourceTree = "<group>"; };
 		944732F21E46496B009A0D59 /* URLTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTransform.swift; sourceTree = "<group>"; };
+		9454D82B1E4FBFFD0019355D /* VKGroupRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKGroupRequest.swift; sourceTree = "<group>"; };
 		947F171D1E465CEE007983DA /* RecordsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsModel.swift; sourceTree = "<group>"; };
 		947F171F1E465D19007983DA /* RecordsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
 		9482B8431E45152200FDB398 /* findOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,10 @@
 		949A87201E48EE94004CB2AE /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		94CE3F7B1E4A61BE004CF9FC /* ThrottleTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrottleTap.swift; sourceTree = "<group>"; };
 		94CE3F7D1E4A6310004CF9FC /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		94DE011B1E4FC50F0069AABE /* VKGroupRsponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKGroupRsponse.swift; sourceTree = "<group>"; };
+		94E9BB701E4FAF5A007AC489 /* VKGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKGroup.swift; sourceTree = "<group>"; };
+		94E9BB721E4FB5ED007AC489 /* VKGroupMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKGroupMembers.swift; sourceTree = "<group>"; };
+		94E9BB741E4FB840007AC489 /* VKWallRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKWallRequest.swift; sourceTree = "<group>"; };
 		94ED000B1E471F20008BA7A3 /* VKPostedPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKPostedPhoto.swift; sourceTree = "<group>"; };
 		94ED000D1E476E38008BA7A3 /* VKDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKDoc.swift; sourceTree = "<group>"; };
 		9EDAB7E963B76FA9D6F28122 /* Pods-findOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-findOut/Pods-findOut.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,9 +175,9 @@
 		944732D81E4605A0009A0D59 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				94E9BB761E4FB88A007AC489 /* Requests */,
 				944732E41E4616AB009A0D59 /* Transforms */,
 				944732E31E46168E009A0D59 /* Data */,
-				944732D91E4605D2009A0D59 /* VKGetWallResponse.swift */,
 			);
 			name = Models;
 			path = findOut;
@@ -176,13 +186,12 @@
 		944732E31E46168E009A0D59 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				94E9BB6F1E4FAF1F007AC489 /* Group */,
+				94E9BB6E1E4FAEF9007AC489 /* Wall */,
 				944732ED1E4645C0009A0D59 /* VKAttachment */,
-				944732DB1E460685009A0D59 /* VKWallRecord.swift */,
-				944732DD1E460853009A0D59 /* VKWallAttachment.swift */,
 				944732DF1E460B92009A0D59 /* VKCommentsInfo.swift */,
 				944732E51E4616C8009A0D59 /* VKLikesInfo.swift */,
 				944732E71E463B4E009A0D59 /* VKRepostsInfo.swift */,
-				944732E91E463D2B009A0D59 /* VKPostType.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -206,6 +215,15 @@
 				94ED000D1E476E38008BA7A3 /* VKDoc.swift */,
 			);
 			name = VKAttachment;
+			sourceTree = "<group>";
+		};
+		9454D82A1E4FBFDE0019355D /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				9454D82B1E4FBFFD0019355D /* VKGroupRequest.swift */,
+				94DE011B1E4FC50F0069AABE /* VKGroupRsponse.swift */,
+			);
+			name = Group;
 			sourceTree = "<group>";
 		};
 		947F171A1E465C86007983DA /* Modules */ = {
@@ -337,6 +355,43 @@
 				9482B84F1E45152200FDB398 /* LaunchScreen.storyboard */,
 			);
 			name = Launch;
+			sourceTree = "<group>";
+		};
+		94E9BB6E1E4FAEF9007AC489 /* Wall */ = {
+			isa = PBXGroup;
+			children = (
+				944732E91E463D2B009A0D59 /* VKPostType.swift */,
+				944732DD1E460853009A0D59 /* VKWallAttachment.swift */,
+				944732DB1E460685009A0D59 /* VKWallRecord.swift */,
+			);
+			name = Wall;
+			sourceTree = "<group>";
+		};
+		94E9BB6F1E4FAF1F007AC489 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				94E9BB701E4FAF5A007AC489 /* VKGroup.swift */,
+				94E9BB721E4FB5ED007AC489 /* VKGroupMembers.swift */,
+			);
+			name = Group;
+			sourceTree = "<group>";
+		};
+		94E9BB761E4FB88A007AC489 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				9454D82A1E4FBFDE0019355D /* Group */,
+				94E9BB771E4FB89F007AC489 /* Wall */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		94E9BB771E4FB89F007AC489 /* Wall */ = {
+			isa = PBXGroup;
+			children = (
+				944732D91E4605D2009A0D59 /* VKWallResponse.swift */,
+				94E9BB741E4FB840007AC489 /* VKWallRequest.swift */,
+			);
+			name = Wall;
 			sourceTree = "<group>";
 		};
 		F95E70A8500AAFC013F1A963 /* Pods */ = {
@@ -487,6 +542,7 @@
 				944732EC1E46421C009A0D59 /* VKAttachment.swift in Sources */,
 				944732E21E461384009A0D59 /* TimeStampTransform.swift in Sources */,
 				949A871A1E48E8A4004CB2AE /* GroupCell.swift in Sources */,
+				94E9BB751E4FB840007AC489 /* VKWallRequest.swift in Sources */,
 				948AE8F91E47C0F70080B0DD /* RecordsScrollView.swift in Sources */,
 				94CE3F7C1E4A61BE004CF9FC /* ThrottleTap.swift in Sources */,
 				944732F31E46496B009A0D59 /* URLTransform.swift in Sources */,
@@ -498,6 +554,8 @@
 				944732EA1E463D2B009A0D59 /* VKPostType.swift in Sources */,
 				941E4E5B1E467E2E00A8863C /* ReusableView.swift in Sources */,
 				941E4E541E466DD800A8863C /* RecordCell.swift in Sources */,
+				94E9BB731E4FB5ED007AC489 /* VKGroupMembers.swift in Sources */,
+				94DE011C1E4FC50F0069AABE /* VKGroupRsponse.swift in Sources */,
 				949A871D1E48EA95004CB2AE /* MenuView.swift in Sources */,
 				944732F11E46491B009A0D59 /* VKLink.swift in Sources */,
 				9482B8471E45152200FDB398 /* AppDelegate.swift in Sources */,
@@ -505,12 +563,14 @@
 				944732EF1E4645D1009A0D59 /* VKPhoto.swift in Sources */,
 				94ED000E1E476E38008BA7A3 /* VKDoc.swift in Sources */,
 				94CE3F7E1E4A6310004CF9FC /* LoginService.swift in Sources */,
-				944732DA1E4605D2009A0D59 /* VKGetWallResponse.swift in Sources */,
+				944732DA1E4605D2009A0D59 /* VKWallResponse.swift in Sources */,
 				949A87141E48E0B9004CB2AE /* MenuViewController.swift in Sources */,
 				941E4E5D1E467E7B00A8863C /* NibLoadableView.swift in Sources */,
+				9454D82C1E4FBFFD0019355D /* VKGroupRequest.swift in Sources */,
 				944732D61E45E89B009A0D59 /* VKService.swift in Sources */,
 				948C42311E4A498D00CDA4A6 /* LoginView.swift in Sources */,
 				948AE8FB1E47C1D80080B0DD /* RecordView.swift in Sources */,
+				94E9BB711E4FAF5A007AC489 /* VKGroup.swift in Sources */,
 				944732E81E463B4E009A0D59 /* VKRepostsInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

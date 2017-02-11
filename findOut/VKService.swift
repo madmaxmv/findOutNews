@@ -15,42 +15,32 @@ class VKService: NSObject {
         super.init()
     }
     
-    var response: VKGetWallResponse?
+    var response: VKWallResponse?
     
     public func setup() {
         VKSdk.initialize(withAppId: "qwerty").register(self)
     }
     
     
-    func getGroupNews(onSuccess: @escaping (VKGetWallResponse) -> Void) {
-        
+    func getGroupNews(onSuccess: @escaping (VKWallResponse) -> Void) {
         if let response = response {
             onSuccess(response)
             return
         }
-        
-        let newsRequest = VKApi.request(withMethod: "wall.get",
-                                        andParameters: ["owner_id": "-26030283"])
-        
-        newsRequest?.execute(resultBlock: { response in
-            print(response?.json ?? "")
-            if let json = response?.json {
-                do{
-                    let objectResponse = try Mapper<VKGetWallResponse>().map(JSONObject: json)
-                    self.response = objectResponse
-                    onSuccess(objectResponse)
-                } catch {
-                    print(error)
-                }
-            }
-        }, errorBlock: { error in
-            let nsError = error as! NSError
-            if Int32(nsError.code) != VK_API_ERROR {
-                nsError.vkError.request.repeat()
-            } else {
-                print(nsError)
-            }
-        })
+        VKWallRequest(ownerId: "-26030283")
+            .execute(onSuccess: { response in
+                self.response = response
+                onSuccess(response)
+            }, onError: { error in print(error) }
+        )
+    }
+    
+    func getGroupInfo(onSuccess: @escaping (VKGroupResponse) -> Void) {
+        VKGroupRequest(groupId: 26030283, fields: ["activity", "description", "status", "city", "age_limits"])
+            .execute(onSuccess: { response in
+                onSuccess(response)
+            }, onError: { error in print(error) }
+        )
     }
 }
 

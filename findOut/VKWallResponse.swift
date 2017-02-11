@@ -1,5 +1,5 @@
 //
-//  VKGetWallResponse.swift
+//  VKWallResponse.swift
 //  findOut
 //
 //  Created by Максим on 04/02/2017.
@@ -10,7 +10,7 @@ import ObjectMapper
 
 /// Response of method wall.get
 /// https://vk.com/dev/wall.get
-struct VKGetWallResponse: ImmutableMappable {
+public struct VKWallResponse: ImmutableMappable {
     
     /// Number of records on the group wall.
     public let recordsCount: Int
