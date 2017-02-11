@@ -29,15 +29,10 @@ class ContainerViewController: UIViewController {
     private lazy var _recordsViewController: UINavigationController? = {
         return UIStoryboard(name: "Records", bundle: nil).instantiateViewController(withIdentifier: "RecordsNavigationController") as? UINavigationController
     }()
+
+    var currentState: SlideOutState = .bothCollapsed
     
     var recordsViewController: UINavigationController!
-    
-    var currentState: SlideOutState = .bothCollapsed {
-        didSet {
-            showShadow(currentState != .bothCollapsed)
-        }
-    }
-    
     var menuViewController: MenuViewController?
     
     let centerPanelExpandedOffset: CGFloat = 60
@@ -116,15 +111,6 @@ extension ContainerViewController { //: CenterViewControllerDelegate {
                        animations: { [weak self] in self?.recordsViewController.view.frame.origin.x = targetPosition },
                        completion: completion)
     }
-    
-    func showShadow(_ shouldShowShadow: Bool) {
-        if (shouldShowShadow) {
-            recordsViewController.view.layer.shadowOpacity = 1.2
-        } else {
-            recordsViewController.view.layer.shadowOpacity = 0.0
-        }
-    }
-    
 }
 
 extension ContainerViewController: UIGestureRecognizerDelegate {
@@ -138,7 +124,6 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
             if (currentState == .bothCollapsed) {
                 if (gestureIsDraggingFromLeftToRight) {
                     addMenuViewController()
-                    showShadow(true)
                 }
             }
         case .changed:

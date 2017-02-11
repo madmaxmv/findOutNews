@@ -14,14 +14,15 @@ class LoginService {
     
     public let isUserLogin = Variable<Bool>(false)
     
-    public func login() {
-        setupVKService()
+    public func login(onComplete: @escaping ()->Void) {
+        setupVKService(onComplete: onComplete)
     }
     
-    private func setupVKService() {
+    private func setupVKService(onComplete: @escaping ()->Void) {
         VKService.instance.setup()
         VKService.instance.getGroupNews(onSuccess: { _ in
             self.isUserLogin.value = true
+            onComplete()
         })
     }
 }

@@ -33,7 +33,7 @@ class RecordsView: UIView {
             switch item.type {
             case .record:
                 let cell = tableView.dequeueReusableCell(for: indexPath) as RecordCell
-                cell.setup(for: item.value as! RecordCell.Model)
+                cell.setup(for: item.value as! VKWallRecord)
                 return cell
             }
         }

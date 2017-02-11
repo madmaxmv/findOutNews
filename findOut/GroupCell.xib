@@ -38,7 +38,6 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GRv-Tv-ceB" secondAttribute="trailing" constant="60" id="Agl-6g-SGs"/>
                             <constraint firstItem="GRv-Tv-ceB" firstAttribute="top" secondItem="Ej6-Xz-8CT" secondAttribute="top" constant="30" id="Kqp-NQ-OcV"/>
@@ -56,7 +55,6 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="Ej6-Xz-8CT" firstAttribute="leading" secondItem="oKH-uZ-okE" secondAttribute="leading" id="3CJ-3g-b7V"/>
                     <constraint firstAttribute="trailing" secondItem="vp6-Er-uit" secondAttribute="trailing" id="508-ZQ-dxu"/>

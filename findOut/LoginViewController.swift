@@ -27,13 +27,15 @@ class LoginViewController: UIViewController {
     }
     
     public func login() {
-        LoginService.instance.login()
-        goToRcords()
+        LoginService.instance.login {
+            self.goToRcords()
+        }
     }
     
     public func ignoreLogin() {
-        LoginService.instance.login()
-        goToRcords()
+        LoginService.instance.login {
+            self.goToRcords()
+        }
     }
 
     private func goToRcords() {

@@ -24,12 +24,11 @@ class RecordsViewController: UIViewController {
         
         title = "Ноффости"
         
-        
-        model.loadWall()
         model.loading.filter { $0 == false }
             .subscribe(onNext: { [unowned self] _ in
                 self.recordsView.setup(for: RecordsViewModel(records: self.model.records))
         }).addDisposableTo(disposeBag)
+        model.loadWall()
     }
 }
 

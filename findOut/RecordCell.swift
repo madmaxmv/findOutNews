@@ -21,35 +21,52 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var cellContentView: UIView!
     
     @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var recordImageView: UIImageView!
+    @IBOutlet weak var recordImageHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var repostsView: UIView!
     @IBOutlet weak var repostsCountLabel: UILabel!
+    
+    @IBOutlet weak var commentsView: UIView!
+    @IBOutlet weak var commentsCountLabel: UILabel!
+    
+    @IBOutlet weak var likesView: UIView!
     @IBOutlet weak var likesCountLabel: UILabel!
+
     
-    @IBOutlet weak var titleLabelHeight: NSLayoutConstraint!
-    
-    public func setup(for data: Model) {
+    public func setup(for record: VKWallRecord) {
         
-        if !data.title.isEmpty {
-            titleLabel.text = data.title
-            titleLabelHeight.constant = 80
-        } else {
-            titleLabelHeight.constant = 0
-        }
+        titleLabel.isHidden = !record.text.isEmpty
+        titleLabel.text = record.text
         
-        if let url = data.url {
-            Async.background {
+        if let url = record.imageURL {
+            Async.background { [weak self] in
                 do {
                     let imageData = try! Data(contentsOf: url)
                     Async.main {
-                        self.recordImageView.image = UIImage(data: imageData)
+                        if let imgView = self?.recordImageView, let image = UIImage(data: imageData) {
+                            imgView.image = image
+//                            let height = image.size.height * imgView.bounds.size.width / image.size.width
+//                            self?.recordImageHeight.constant = height < 350 ? height : 350
+                            
+                        }
                     }
                 }
             }
         }
+
+        backgroundColor = UIColor.clear
         
-        cellContentView.layer.cornerRadius = 10
+        cellContentView.layer.cornerRadius = 12
+    
+        repostsView.isHidden = (record.reposts.count == 0)
+        repostsCountLabel.text = record.reposts.count.description
         
-        repostsCountLabel.text = data.repostsCount.description
-        likesCountLabel.text = data.likesCount.description
+        commentsView.isHidden = (record.comments.count == 0)
+        commentsCountLabel.text = record.comments.count.description
+        
+        likesView.isHidden = (record.likes.count == 0)
+        likesCountLabel.text = record.likes.count.description
     }
 }

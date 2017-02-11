@@ -28,12 +28,7 @@ class RecordsViewModel {
         dataSource.value = [
             SectionModel(model: .records,
                          items: records.map { record in
-                            let data = RecordCell.Model(title:        record.text,
-                                                        url:          record.imageURL,
-                                                        repostsCount: record.reposts.count,
-                                                        likesCount:   record.likes.count
-                            )
-                            return (type: .record, value: data)
+                            return (type: .record, value: record  as? Any)
             })
         ]
     }

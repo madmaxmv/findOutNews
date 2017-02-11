@@ -13,7 +13,7 @@
         <scene sceneID="ZHM-0h-SNK">
             <objects>
                 <navigationController restorationIdentifier="RecordsNavigationController" storyboardIdentifier="RecordsNavigationController" id="6UD-Zs-ud3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lbb-4o-JnQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Lbb-4o-JnQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.59215686270000001" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,19 +40,26 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RecordsView" customModule="findOut" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3kS-IJ-vzp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ed7-39-xeL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59215686270000001" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3kS-IJ-vzp" secondAttribute="bottom" id="532-ke-Yv3"/>
+                            <constraint firstAttribute="trailing" secondItem="3kS-IJ-vzp" secondAttribute="trailing" id="Gj1-w9-hlr"/>
                             <constraint firstAttribute="trailing" secondItem="Ed7-39-xeL" secondAttribute="trailing" id="H7j-Ki-kpo"/>
                             <constraint firstItem="Ed7-39-xeL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IVQ-2i-aLA"/>
+                            <constraint firstItem="3kS-IJ-vzp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="S48-5z-LCk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ed7-39-xeL" secondAttribute="bottom" id="TzX-r8-ARX"/>
+                            <constraint firstItem="3kS-IJ-vzp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UeM-Dz-D2t"/>
                             <constraint firstItem="Ed7-39-xeL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rg7-PS-Q5L"/>
                         </constraints>
                         <connections>
@@ -95,4 +102,7 @@
             <point key="canvasLocation" x="270" y="-331"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="320" height="568"/>
+    </resources>
 </document>
