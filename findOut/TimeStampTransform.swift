@@ -10,12 +10,12 @@ import ObjectMapper
 
 /// Преобразование даты для передачи на сервер в JSON
 internal class TimeStampTransform: TransformType {
-    
+
     typealias Object = Date
     typealias JSON = Int
-    
+
     init() {}
-    
+
     /// Функция преобразует из JSON в дату.
     func transformFromJSON(_ value: Any?) -> Date? {
         if let timeInt = value as? Int {
@@ -23,7 +23,7 @@ internal class TimeStampTransform: TransformType {
         }
         return nil
     }
-    
+
     /// Функция преобразует в JSON из даты.
     func transformToJSON(_ value: Date?) -> Int? {
         if let date = value {

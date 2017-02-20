@@ -10,20 +10,20 @@ import RxSwift
 import RxDataSources
 
 class RecordsViewModel {
-    
+
     enum SectionType {
         case records
     }
-    
+
     enum RowType {
         case record
     }
-    
+
     typealias Row = (type: RowType, value: Any?)
     typealias Section = (type: SectionType, rows: [Row])
-    
+
     public var dataSource = Variable<[SectionModel<RecordsViewModel.SectionType, RecordsViewModel.Row>]>([])
-    
+
     public init(records: [VKWallRecord]) {
         dataSource.value = [
             SectionModel(model: .records,

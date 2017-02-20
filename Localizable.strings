@@ -1,0 +1,29 @@
+/*
+  Localizable.strings
+  findOut
+
+  Created by Максим on 12/02/2017.
+  Copyright © 2017 Personal. All rights reserved.
+*/
+
+"DayOfWeek.saturday"    = "суббота";
+"DayOfWeek.sunday"      = "воскресенье";
+"DayOfWeek.monday"      = "понедельник";
+"DayOfWeek.tuesday"     = "вторник";
+"DayOfWeek.wednesday"   = "среда";
+"DayOfWeek.thursday"    = "четверг";
+"DayOfWeek.friday"      = "пятница";
+
+"DayOfWeek.inSaturday"  = "в субботу";
+"DayOfWeek.inSunday"    = "в воскресенье";
+"DayOfWeek.inMonday"    = "в понедельник";
+"DayOfWeek.inTuesday"   = "во вторник";
+"DayOfWeek.inWednesday" = "в среду";
+"DayOfWeek.inThursday"  = "в четверг";
+"DayOfWeek.inFriday"    = "в пятницу";
+
+//------------------------------------------------------------------------
+// ПОдпис
+"SubscribersCountText.form1" = "подписчик";
+"SubscribersCountText.form2" = "подписчика";
+"SubscribersCountText.form3" = "подписчиков";

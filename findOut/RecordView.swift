@@ -11,32 +11,30 @@ import RxSwift
 import RxDataSources
 
 class RecordTableView: UITableView {
-    
+
     enum SectionType {
         case records
     }
-    
+
     enum RowType {
         case text
     }
-    
+
     typealias Row = (type: RowType, value: Any?)
     typealias Section = (type: SectionType, rows: [Row])
-    
+
     var ownDataSource = RxTableViewSectionedReloadDataSource<SectionModel<SectionType, Row>>()
-    
+
     public func setup(for record: VKWallRecord) {
         var tmpldataSource = Variable<[SectionModel<SectionType, Row>]>([])
         var rows: [Row] = []
-        
+
         if !record.text.isEmpty {
             rows.append((type: .text, value: record.text))
         }
-        
+
         record.attachments?.forEach { attachment in
-            
-            
-            
+
         }
 //        tmpldataSource.value = [
 //                SectionModel(model: .records,
@@ -51,5 +49,5 @@ class RecordTableView: UITableView {
 //            ]
 //        }
     }
-    
+
 }

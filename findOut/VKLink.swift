@@ -10,25 +10,25 @@ import ObjectMapper
 
 /// Ссылка.
 public struct VKLink: ImmutableMappable {
-    
+
     /// URL ссылки.
     public let url: URL?
-    
+
     /// заголовок ссылки.
     public let title: String
-    
+
     /// подпись ссылки (если имеется).
     public let caption: String
-    
+
     /// описание ссылки.
     public let description: String
-    
+
     /// изображение превью.
     public let photo: VKPhoto
-    
+
     /// является ли ссылка внешней (1 — является, 0 — не является).
     public let isExternal: Bool
-    
+
     public init(map: Map) throws {
         url         = try? map.value("url", using: URLTransform())
         title       = try map.value("title")

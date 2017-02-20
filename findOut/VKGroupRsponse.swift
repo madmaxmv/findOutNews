@@ -13,7 +13,7 @@ public struct VKGroupResponse: ImmutableMappable {
 
     /// Массив объектов, описывающих сообщества.
     public let groups: [VKGroup]
-    
+
     public init(map: Map) throws {
         groups = try map.value("response")
     }

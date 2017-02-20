@@ -10,28 +10,28 @@ import UIKit
 import RxSwift
 
 class LoginViewController: UIViewController {
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
-    
+
     private var loginView: LoginView {
         return view as! LoginView
     }
-    
+
     private let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         loginView.controller = self
         loginView.setup()
     }
-    
+
     public func login() {
         LoginService.instance.login {
             self.goToRcords()
         }
     }
-    
+
     public func ignoreLogin() {
         LoginService.instance.login {
             self.goToRcords()

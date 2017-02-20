@@ -10,12 +10,12 @@ import ObjectMapper
 
 /// Преобразование даты для передачи на сервер в JSON
 internal class URLTransform: TransformType {
-    
+
     typealias Object = URL
     typealias JSON = String
-    
+
     init() {}
-    
+
     /// Функция преобразует из JSON в дату.
     func transformFromJSON(_ value: Any?) -> URL? {
         if let url = value as? String {
@@ -23,7 +23,7 @@ internal class URLTransform: TransformType {
         }
         return nil
     }
-    
+
     /// Функция преобразует в JSON из даты.
     func transformToJSON(_ value: URL?) -> String? {
         if let url = value {

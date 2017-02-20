@@ -1,0 +1,20 @@
+disabled_rules:
+#
+# Ошибки.
+#
+
+   # Пример: as!
+   - force_cast
+
+   # try!
+   - force_try
+
+line_length: 140
+
+variable_name:
+  excluded: # excluded via string array
+    - id
+    - url
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods

@@ -11,14 +11,14 @@ import RxSwift
 class LoginService {
     public static let instance = LoginService()
     private init() {}
-    
+
     public let isUserLogin = Variable<Bool>(false)
-    
-    public func login(onComplete: @escaping ()->Void) {
+
+    public func login(onComplete: @escaping () -> Void) {
         setupVKService(onComplete: onComplete)
     }
-    
-    private func setupVKService(onComplete: @escaping ()->Void) {
+
+    private func setupVKService(onComplete: @escaping () -> Void) {
         VKService.instance.setup()
         VKService.instance.getGroupNews(onSuccess: { _ in
             self.isUserLogin.value = true

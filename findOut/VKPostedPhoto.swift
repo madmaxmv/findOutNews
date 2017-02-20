@@ -10,19 +10,19 @@ import ObjectMapper
 
 /// Устаревший тип вложения. Он может быть возвращен лишь для записей, созданных раньше 2013 года.
 public struct VKPostedPhoto: ImmutableMappable {
-    
+
     /// идентификатор фотографии.
     public let id: Int
-    
+
     /// идентификатор владельца фотографии.
     public let ownerId: Int
-    
+
     /// URL изображения для предпросмотра.
     public let photo130: URL?
-    
+
     /// URL полноразмерного изображения.
     public let photo604: URL?
-    
+
     public init(map: Map) throws {
         id       = try map.value("id")
         ownerId  = try map.value("owner_id")

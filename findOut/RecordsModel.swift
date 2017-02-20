@@ -9,18 +9,18 @@
 import RxSwift
 
 class RecordsModel {
-    
+
     public var loading = PublishSubject<Bool>()
-    
+
     public var records: [VKWallRecord] {
         return _records!
     }
-    
+
     private var _recordsCount: Int?
     private var _records: [VKWallRecord]?
-    
+
     init() {}
-    
+
     public func loadWall() {
         loading.onNext(true)
         VKService.instance.getGroupNews { [unowned self] response in

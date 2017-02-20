@@ -9,8 +9,8 @@
 import RxSwift
 
 extension ObservableType {
-    
-    public func throttleTap(inScheduler scheduler: SchedulerType = MainScheduler.instance) -> Observable<Self.E>{
+
+    public func throttleTap(inScheduler scheduler: SchedulerType = MainScheduler.instance) -> Observable<Self.E> {
         return throttle(0.5, scheduler: scheduler)
     }
 }

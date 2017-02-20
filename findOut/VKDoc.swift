@@ -9,31 +9,31 @@
 import ObjectMapper
 
 public struct VKDoc: ImmutableMappable {
-    
+
     /// идентификатор документа.
     public let id: Int
-    
+
     /// идентификатор владельца документа.
     public let ownerId: Int
-    
+
     /// название документа.
     public let title: String
 
     /// размер документа в байтах.
     public let size: Int
-    
+
     /// расширение документа.
     public let ext: String
-    
+
     /// адрес документа, по которому его можно загрузить.
     public let url: URL
-    
+
     /// дата добавления в формате Unixtime.
     public let date: Date
-    
+
     /// тип документа.
     public let type: VKDocType
-    
+
     public init(map: Map) throws {
         id = try map.value("id")
         ownerId = try map.value("owner_id")

@@ -10,13 +10,13 @@ import ObjectMapper
 
 /// Информация о комментариях к записи
 public struct VKCommentsInfo: ImmutableMappable {
-    
+
     /// количество комментариев.
     public let count: Int
-    
+
     /// информация о том, может ли текущий пользователь комментировать запись.
     public let canPost: Bool?
-    
+
     public init(map: Map) throws {
         count = try map.value("count")
         canPost = try? map.value("can_post")

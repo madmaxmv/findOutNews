@@ -16,7 +16,7 @@ public enum VKAttachment {
     case photo(VKPhoto)
     case link(VKLink)
     case doc(VKDoc)
-    
+
     init(map: Map, type: VKAttachmentType) throws {
         switch type {
         case .link:

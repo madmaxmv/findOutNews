@@ -14,14 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        
-        let firstViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() //ContainerViewController()
-        
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        let firstViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()
+        //ContainerViewController()
+
         window!.rootViewController = firstViewController
         window!.makeKeyAndVisible()
-        
+
 //        VKSdk.wakeUpSession(["messages"]) { state, error in
 //            switch state {
 //            case .authorized:
@@ -32,13 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //
 //        
-//        window?.rootViewController = UIStoryboard(name: "Records", bundle: nil).instantiateInitialViewController()
+//        window?.rootViewController = UIStoryboard(name: "Records", bundle: nil)
+//            .instantiateInitialViewController()
 //        window?.makeKeyAndVisible()
 //
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         VKSdk.processOpen(url, fromApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String)
         return true
     }

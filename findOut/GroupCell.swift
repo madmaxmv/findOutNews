@@ -9,23 +9,23 @@
 import UIKit
 
 class GroupCell: UITableViewCell {
-    
+
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var checkMarkImageView: UIImageView!
-    
+
     struct Model {
         let groupName: String
         let isSelected: Bool
     }
-    
+
     public func setup(for model: Model) {
         groupNameLabel.text = model.groupName
         switchCheckBox(on: model.isSelected)
         selectionStyle = .none
-        
+
         currentValue = model.isSelected
     }
-    
+
     private func switchCheckBox(on value: Bool) {
         if value {
             self.select()
@@ -33,13 +33,13 @@ class GroupCell: UITableViewCell {
             self.deslect()
         }
     }
-    private  func select(){
+    private  func select() {
         checkMarkImageView.image = UIImage(named: "selected")
     }
-    private  func deslect(){
+    private  func deslect() {
         checkMarkImageView.image = UIImage(named: "deselected")
     }
-    
+
     private var currentValue: Bool!
     public func toggle() {
         currentValue = !currentValue

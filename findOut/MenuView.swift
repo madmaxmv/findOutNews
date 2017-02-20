@@ -2,7 +2,7 @@
 //  MenuView.swift
 //  findOut
 //
-//  Created by Максим on 06/02/2017.
+//  Created by Максим on 12/02/2017.
 //  Copyright © 2017 Personal. All rights reserved.
 //
 
@@ -11,49 +11,35 @@ import RxSwift
 import RxDataSources
 
 class MenuView: UIView {
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+
+    @IBOutlet weak var scrollView: UIScrollView!
+
     private var model: MenuViewModel!
-    private let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<MenuViewModel.SectionType, MenuViewModel.Row>>()
     private let disposeBag = DisposeBag()
-    
+
     public func setup(for viewModel: MenuViewModel) {
         model = viewModel
-        tableView.register(GroupCell.self)
-        
-        tableView.estimatedRowHeight = 81
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.separatorStyle = .none
-        
-        //--------------------------------------------------------------
-        /// Настраиваем дата сорс.
-        //--------------------------------------------------------------
-        dataSource.configureCell = { (_, tableView, indexPath, item) in
-            switch item.type {
-            case .group:
-                let cell = tableView.dequeueReusableCell(for: indexPath) as GroupCell
-                cell.setup(for: item.value as! GroupCell.Model)
-                return cell
-            }
-        }
-        
-        //--------------------------------------------------------------
-        /// Биндим dataSource ячейкам.
-        //--------------------------------------------------------------
-        model.dataSource.asObservable()
-            .bindTo(tableView.rx.items(dataSource: dataSource))
-            .addDisposableTo(disposeBag)
-        
-        tableView.delegate = self
-    }
-    
-}
 
-// Mark: Table View Delegate
-extension MenuView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! GroupCell
-        cell.toggle()
+        addGroupView(forGroup: model.groups.first!, to: scrollView)
     }
+
+    private func addGroupView(forGroup group: VKGroup, to superview: UIView) {
+        let view = Bundle.main.loadNib(named: "GroupView") as GroupView
+        view.setup(forGroup: group)
+        view.frame = superview.frame
+        view.frame.origin.y = 0
+        superview.addSubview(view)
+//        
+//        let topConstraint = NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal,
+//                                               toItem: superview, attribute: .top,multiplier: 1, constant: 0)
+//        let bottomConstraint = NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal,
+//                                                  toItem: superview, attribute: .bottom, multiplier: 1, constant: 0)
+//        let trailingConstraint = NSLayoutConstraint(item: view, attribute: .trailing, relatedBy: .equal,
+//                                                    toItem: superview, attribute: .trailing, multiplier: 1, constant: 0)
+//        let leadingConstraint = NSLayoutConstraint(item: view, attribute: .leading, relatedBy: .equal,
+//                                                   toItem: superview, attribute: .leading, multiplier: 1, constant: 0)
+//        
+//        view.addConstraints([topConstraint, bottomConstraint, trailingConstraint, leadingConstraint])
+    }
+
 }

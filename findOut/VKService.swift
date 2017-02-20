@@ -14,14 +14,13 @@ class VKService: NSObject {
     private override init() {
         super.init()
     }
-    
+
     var response: VKWallResponse?
-    
+
     public func setup() {
         VKSdk.initialize(withAppId: "qwerty").register(self)
     }
-    
-    
+
     func getGroupNews(onSuccess: @escaping (VKWallResponse) -> Void) {
         if let response = response {
             onSuccess(response)
@@ -34,9 +33,9 @@ class VKService: NSObject {
             }, onError: { error in print(error) }
         )
     }
-    
+
     func getGroupInfo(onSuccess: @escaping (VKGroupResponse) -> Void) {
-        VKGroupRequest(groupId: 26030283, fields: ["activity", "description", "status", "city", "age_limits"])
+        VKGroupRequest(groupId: 26030283, fields: ["activity", "description", "status", "city", "age_limits", "members_count"])
             .execute(onSuccess: { response in
                 onSuccess(response)
             }, onError: { error in print(error) }
@@ -44,9 +43,8 @@ class VKService: NSObject {
     }
 }
 
-
 extension VKService: VKSdkDelegate {
-    
+
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         if let token = result.token {
             print(token)
@@ -54,9 +52,8 @@ extension VKService: VKSdkDelegate {
             print("Fuck, why are you so stuped")
         }
     }
-    
+
     func vkSdkUserAuthorizationFailed() {
         print("Fuck, vk Sdk User Authorization Failed")
     }
 }
-

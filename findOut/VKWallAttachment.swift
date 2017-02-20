@@ -29,13 +29,13 @@ public enum VKAttachmentType: String {
 
 /// Информация о медиавложениях в записях.
 public struct VKWallAttachment: ImmutableMappable {
-    
+
     /// Тип вложения.
     public let type: VKAttachmentType
-    
+
     /// Медиавложение, которое зависит от типа `type`.
     public var attachment: VKAttachment
-    
+
     public init(map: Map) throws {
         type = try map.value("type")
         attachment = try VKAttachment(map: map, type: type)
