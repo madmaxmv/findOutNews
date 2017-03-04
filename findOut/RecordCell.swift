@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import Async
 
 class RecordCell: UITableViewCell {
@@ -34,25 +36,49 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var likesView: UIView!
     @IBOutlet weak var likesCountLabel: UILabel!
 
+    public var didSelect = PublishSubject<Void>()
+
+    var cellImage = PublishSubject<UIImage?>()
+    private var disposeBag = DisposeBag()
+
     public func setup(for record: VKWallRecord) {
 
-        titleLabel.isHidden = !record.text.isEmpty
-        titleLabel.text = record.text
+        if record.text.isEmpty {
+            titleLabel.isHidden = true
+        } else {
+            titleLabel.isHidden = false
+            titleLabel.text = record.text
 
-        if let url = record.imageURL {
-            Async.background { [weak self] in
-                do {
-                    let imageData = try! Data(contentsOf: url)
-                    Async.main {
-                        if let imgView = self?.recordImageView, let image = UIImage(data: imageData) {
-                            imgView.image = image
-                            let height = image.size.height * imgView.bounds.size.width / image.size.width
-                            self?.recordImageHeight.constant = height < 350 ? height : 350
+        }
+
+        for attachment in record.attachments ?? [] {
+            switch attachment.attachment {
+            case .photo(let photo):
+                if let url = photo.photo604 {
+                    Async.background { [weak self] in
+                        do {
+                            if let imageData = try? Data(contentsOf: url) {
+                                self?.cellImage.onNext(UIImage(data: imageData))
+                            }
                         }
                     }
                 }
+                if photo.width > 0 {
+                    let height = CGFloat(photo.height) * UIScreen.main.bounds.width / CGFloat(photo.width)
+                    recordImageHeight.constant = height
+                }
+            default: break
             }
         }
+
+        cellImage
+            .subscribe(onNext: { [weak self] image in
+                Async.main {
+                    if let imgView = self?.recordImageView, let image = image {
+                        imgView.image = image
+                    }
+                }
+        }).addDisposableTo(disposeBag)
 
         backgroundColor = UIColor.clear
 
@@ -66,5 +92,11 @@ class RecordCell: UITableViewCell {
 
         likesView.isHidden = (record.likes.count == 0)
         likesCountLabel.text = record.likes.count.description
+
+        selectionStyle = .none
+    }
+
+    override func prepareForReuse() {
+        disposeBag = DisposeBag()
     }
 }

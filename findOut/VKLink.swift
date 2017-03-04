@@ -38,9 +38,3 @@ public struct VKLink: ImmutableMappable {
         isExternal  = try map.value("is_external")
     }
 }
-
-extension VKLink: RecortImageable {
-    var imageURL: URL? {
-        return photo.imageURL
-    }
-}

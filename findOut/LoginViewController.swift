@@ -33,9 +33,7 @@ class LoginViewController: UIViewController {
     }
 
     public func ignoreLogin() {
-        LoginService.instance.login {
-            self.goToRcords()
-        }
+        goToRcords()
     }
 
     private func goToRcords() {

@@ -41,9 +41,3 @@ public struct VKWallAttachment: ImmutableMappable {
         attachment = try VKAttachment(map: map, type: type)
     }
 }
-
-extension VKWallAttachment: RecortImageable {
-    var imageURL: URL? {
-        return attachment.imageURL
-    }
-}

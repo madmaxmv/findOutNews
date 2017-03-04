@@ -229,7 +229,7 @@
 			children = (
 				94E9BB6F1E4FAF1F007AC489 /* Group */,
 				94E9BB6E1E4FAEF9007AC489 /* Wall */,
-				944732ED1E4645C0009A0D59 /* VKAttachment */,
+				944732ED1E4645C0009A0D59 /* Attachment */,
 				944732DF1E460B92009A0D59 /* VKCommentsInfo.swift */,
 				944732E51E4616C8009A0D59 /* VKLikesInfo.swift */,
 				944732E71E463B4E009A0D59 /* VKRepostsInfo.swift */,
@@ -246,7 +246,7 @@
 			name = Transforms;
 			sourceTree = "<group>";
 		};
-		944732ED1E4645C0009A0D59 /* VKAttachment */ = {
+		944732ED1E4645C0009A0D59 /* Attachment */ = {
 			isa = PBXGroup;
 			children = (
 				944732EB1E46421C009A0D59 /* VKAttachment.swift */,
@@ -255,7 +255,7 @@
 				94ED000B1E471F20008BA7A3 /* VKPostedPhoto.swift */,
 				94ED000D1E476E38008BA7A3 /* VKDoc.swift */,
 			);
-			name = VKAttachment;
+			name = Attachment;
 			sourceTree = "<group>";
 		};
 		9454D82A1E4FBFDE0019355D /* Group */ = {
@@ -304,8 +304,9 @@
 		9482B83A1E45152200FDB398 = {
 			isa = PBXGroup;
 			children = (
-				944732D71E460589009A0D59 /* VK */,
+				94CE3F791E4A4D6D004CF9FC /* Supporting Files */,
 				9482B8451E45152200FDB398 /* findOut */,
+				944732D71E460589009A0D59 /* VK */,
 				9482B8441E45152200FDB398 /* Products */,
 				F95E70A8500AAFC013F1A963 /* Pods */,
 				86BD271847EA266518904B1E /* Frameworks */,
@@ -324,7 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				944732D41E45E887009A0D59 /* Services */,
-				94CE3F791E4A4D6D004CF9FC /* Supporting Files */,
 				941E4E591E467DF700A8863C /* Common */,
 				947F171A1E465C86007983DA /* Modules */,
 				9482B8461E45152200FDB398 /* AppDelegate.swift */,
@@ -390,7 +390,6 @@
 				943C33021E50BE8B001B6ADD /* Localizable.strings */,
 			);
 			name = "Supporting Files";
-			path = ..;
 			sourceTree = "<group>";
 		};
 		94CE3F7A1E4A4DC3004CF9FC /* Launch */ = {
@@ -768,7 +767,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = findOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = none.findOut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.eggApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -783,7 +782,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = findOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = none.findOut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.eggApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

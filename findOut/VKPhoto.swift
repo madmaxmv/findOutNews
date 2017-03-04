@@ -78,13 +78,3 @@ public struct VKPhoto: ImmutableMappable {
         height    = try map.value("height")
     }
 }
-
-protocol RecortImageable {
-    var imageURL: URL? { get }
-}
-
-extension VKPhoto: RecortImageable {
-    var imageURL: URL? {
-        return photo604
-    }
-}

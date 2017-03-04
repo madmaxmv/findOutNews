@@ -33,15 +33,3 @@ public enum VKAttachment {
         }
     }
 }
-
-extension VKAttachment: RecortImageable {
-    var imageURL: URL? {
-        switch self {
-        case .link(let link):
-            return link.imageURL
-        case .photo(let photo):
-            return photo.imageURL
-        default: return nil
-        }
-    }
-}

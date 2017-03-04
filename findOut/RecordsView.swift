@@ -14,8 +14,8 @@ class RecordsView: UIView {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private var model: RecordsViewModel!
-    private let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<RecordsViewModel.SectionType, RecordsViewModel.Row>>()
+    fileprivate var model: RecordsViewModel!
+    fileprivate let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<RecordsViewModel.SectionType, RecordsViewModel.Row>>()
 
     private var disposeBag = DisposeBag()
 
@@ -33,7 +33,7 @@ class RecordsView: UIView {
             switch item.type {
             case .record:
                 let cell = tableView.dequeueReusableCell(for: indexPath) as RecordCell
-                cell.setup(for: item.value as! VKWallRecord)
+                cell.setup(for: item.value)
                 return cell
             }
         }
@@ -44,5 +44,13 @@ class RecordsView: UIView {
         model.dataSource.asObservable()
             .bindTo(tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(disposeBag)
+
+        tableView.delegate = self
+    }
+}
+
+extension RecordsView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return model.record(for: indexPath).height
     }
 }

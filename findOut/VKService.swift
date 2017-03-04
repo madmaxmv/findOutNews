@@ -7,18 +7,36 @@
 //
 
 import ObjectMapper
+import RxSwift
 import VK_ios_sdk
 
 class VKService: NSObject {
     public static let instance = VKService()
     private override init() {
         super.init()
+        setup()
     }
 
     var response: VKWallResponse?
 
+    fileprivate let authorizeComplete = PublishSubject<VKAuthorizationResult>()
+    private let disposeBag = DisposeBag()
+
     public func setup() {
-        VKSdk.initialize(withAppId: "qwerty").register(self)
+        VKSdk.initialize(withAppId: "com.none.eggApp").register(self)
+    }
+
+    public func wakeUpSession(withScope scope: [String], onComplete: @escaping (VKAuthorizationState) -> Void) {
+        VKSdk.wakeUpSession(scope) { state, error in
+            onComplete(state)
+        }
+    }
+
+    public func authorize(_ scope: [String], onComplete: @escaping (VKAuthorizationResult) -> Void) {
+        VKSdk.authorize(scope)
+        authorizeComplete.subscribe(onNext: { result in
+            onComplete(result)
+        }).addDisposableTo(disposeBag)
     }
 
     func getGroupNews(onSuccess: @escaping (VKWallResponse) -> Void) {
@@ -46,11 +64,7 @@ class VKService: NSObject {
 extension VKService: VKSdkDelegate {
 
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        if let token = result.token {
-            print(token)
-        } else {
-            print("Fuck, why are you so stuped")
-        }
+        authorizeComplete.onNext(result)
     }
 
     func vkSdkUserAuthorizationFailed() {

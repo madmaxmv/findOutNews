@@ -23,16 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = firstViewController
         window!.makeKeyAndVisible()
 
-//        VKSdk.wakeUpSession(["messages"]) { state, error in
-//            switch state {
-//            case .authorized:
-//                break
-//            default:
-//                VKSdk.authorize(["message"])
-//            }
-//        }
-//
-//        
 //        window?.rootViewController = UIStoryboard(name: "Records", bundle: nil)
 //            .instantiateInitialViewController()
 //        window?.makeKeyAndVisible()

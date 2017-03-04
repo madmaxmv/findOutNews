@@ -94,9 +94,3 @@ public struct VKWallRecord: ImmutableMappable {
         markedAsAds  = try map.value("marked_as_ads")
     }
 }
-
-extension VKWallRecord: RecortImageable {
-    var imageURL: URL? {
-        return attachments?.first?.imageURL
-    }
-}
