@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Agrume
 import Async
 
 class RecordCell: UITableViewCell {
@@ -37,6 +38,8 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var likesCountLabel: UILabel!
 
     public var didSelect = PublishSubject<Void>()
+
+    weak var controller: UIViewController?
 
     var cellImage = PublishSubject<UIImage?>()
     private var disposeBag = DisposeBag()
@@ -93,7 +96,23 @@ class RecordCell: UITableViewCell {
         likesView.isHidden = (record.likes.count == 0)
         likesCountLabel.text = record.likes.count.description
 
-        selectionStyle = .none
+        //selectionStyle = .none
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let imageTapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTap))
+        imageTapGesture.cancelsTouchesInView = false
+        recordImageView.addGestureRecognizer(imageTapGesture)
+    }
+
+    func imageTap(_ sender: UITapGestureRecognizer) {
+        if let image = recordImageView.image, let controller = controller {
+            let agrume = Agrume(image: image,
+                                backgroundBlurStyle: .light,
+                                backgroundColor: UIColor.black)
+            agrume.showFrom(controller)
+        }
     }
 
     override func prepareForReuse() {

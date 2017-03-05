@@ -17,6 +17,7 @@ class RecordsView: UIView {
     fileprivate var model: RecordsViewModel!
     fileprivate let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<RecordsViewModel.SectionType, RecordsViewModel.Row>>()
 
+    weak var controller: UIViewController?
     private var disposeBag = DisposeBag()
 
     public func setup(for viewModel: RecordsViewModel) {
@@ -34,6 +35,7 @@ class RecordsView: UIView {
             case .record:
                 let cell = tableView.dequeueReusableCell(for: indexPath) as RecordCell
                 cell.setup(for: item.value)
+                cell.controller = self.controller
                 return cell
             }
         }

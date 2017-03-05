@@ -455,8 +455,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9482B8551E45152200FDB398 /* Build configuration list for PBXNativeTarget "findOut" */;
 			buildPhases = (
-				943251301E5B7F8E00A0B5E3 /* SwiftLint */,
 				43C8F04A1E0F4F543D19777A /* [CP] Check Pods Manifest.lock */,
+				943251301E5B7F8E00A0B5E3 /* SwiftLint */,
 				9482B83F1E45152200FDB398 /* Sources */,
 				9482B8401E45152200FDB398 /* Frameworks */,
 				9482B8411E45152200FDB398 /* Resources */,

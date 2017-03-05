@@ -22,8 +22,9 @@ class RecordsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Ноффости"
+        title = "The Wall"
 
+        recordsView.controller = self
         model.loading.filter { $0 == false }
             .subscribe(onNext: { [unowned self] _ in
                 self.recordsView.setup(for: RecordsViewModel(records: self.model.records))

@@ -18,14 +18,15 @@ target ‘findOut’ do
     
     # HockeyApp - распространение и аналитика
     pod 'HockeySDK-Source', '~> 4.1'
-    
+
+    # Отображение фоточек
+    pod 'Agrume', :git => 'https://github.com/JanGorman/Agrume.git'
+
     # Rx
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
     pod 'RxBlocking', '~> 3.0'
     pod 'RxDataSources', '~> 1.0'
-
-    pod 'Optimizely-iOS-SDK', '~> 1.5'
     
     # вспомогательные методы для асинхронного выполнения задач
     pod 'AsyncSwift', '~> 2.0'

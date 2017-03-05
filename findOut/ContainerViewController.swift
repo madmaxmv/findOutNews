@@ -51,6 +51,7 @@ class ContainerViewController: UIViewController {
 
         let panGestureRecognizer = UIPanGestureRecognizer(target: self,
                                                           action: #selector(ContainerViewController.handlePanGesture(_:)))
+        panGestureRecognizer.cancelsTouchesInView = false
         recordsViewController.view.addGestureRecognizer(panGestureRecognizer)
 
     }
