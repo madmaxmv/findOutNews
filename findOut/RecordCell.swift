@@ -95,8 +95,6 @@ class RecordCell: UITableViewCell {
 
         likesView.isHidden = (record.likes.count == 0)
         likesCountLabel.text = record.likes.count.description
-
-        //selectionStyle = .none
     }
 
     override func awakeFromNib() {

@@ -53,7 +53,6 @@ class ContainerViewController: UIViewController {
                                                           action: #selector(ContainerViewController.handlePanGesture(_:)))
         panGestureRecognizer.cancelsTouchesInView = false
         recordsViewController.view.addGestureRecognizer(panGestureRecognizer)
-
     }
 
     func addMenuViewController() {
@@ -121,14 +120,10 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
     // MARK: Gesture recognizer
 
     func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
-        let gestureIsDraggingFromLeftToRight = (recognizer.velocity(in: view).x > 0)
-
         switch recognizer.state {
         case .began:
             if currentState == .bothCollapsed {
-                if gestureIsDraggingFromLeftToRight {
-                    addMenuViewController()
-                }
+                addMenuViewController()
             }
         case .changed:
             guard let recognizerView = recognizer.view else {
