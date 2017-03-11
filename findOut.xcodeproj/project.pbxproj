@@ -100,9 +100,9 @@
 		9482B8461E45152200FDB398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9482B8481E45152200FDB398 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		9482B84B1E45152200FDB398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Records.storyboard; sourceTree = "<group>"; };
-		9482B84D1E45152200FDB398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = findOut/Assets.xcassets; sourceTree = "<group>"; };
+		9482B84D1E45152200FDB398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9482B8501E45152200FDB398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9482B8521E45152200FDB398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = findOut/Info.plist; sourceTree = "<group>"; };
+		9482B8521E45152200FDB398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948AE8F81E47C0F70080B0DD /* RecordsScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsScrollView.swift; sourceTree = "<group>"; };
 		948AE8FA1E47C1D80080B0DD /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		948AE8FC1E47C1EE0080B0DD /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
@@ -156,39 +156,39 @@
 				948AE8FA1E47C1D80080B0DD /* RecordView.swift */,
 				948AE8FC1E47C1EE0080B0DD /* RecordView.xib */,
 			);
-			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		941E4E591E467DF700A8863C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				941E4E5A1E467E2E00A8863C /* ReusableView.swift */,
-				941E4E5C1E467E7B00A8863C /* NibLoadableView.swift */,
-				94CE3F7B1E4A61BE004CF9FC /* ThrottleTap.swift */,
-				943C32F91E50AD02001B6ADD /* Optional.swift */,
-				943C32FF1E50BD1E001B6ADD /* Int+.swift */,
 				943C330A1E50FC8D001B6ADD /* Bundle+.swift */,
+				943C32FF1E50BD1E001B6ADD /* Int+.swift */,
+				941E4E5C1E467E7B00A8863C /* NibLoadableView.swift */,
+				943C32F91E50AD02001B6ADD /* Optional.swift */,
+				941E4E5A1E467E2E00A8863C /* ReusableView.swift */,
+				94CE3F7B1E4A61BE004CF9FC /* ThrottleTap.swift */,
 				9424E7121E74831F003A0D13 /* UIView+Extensions.swift */,
 			);
-			name = Common;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		943C33041E50EE4F001B6ADD /* MenuTableView */ = {
 			isa = PBXGroup;
 			children = (
-				949A87201E48EE94004CB2AE /* MenuTableViewModel.swift */,
 				949A871C1E48EA95004CB2AE /* MenuTableView.swift */,
+				949A87201E48EE94004CB2AE /* MenuTableViewModel.swift */,
 			);
-			name = MenuTableView;
+			path = MenuTableView;
 			sourceTree = "<group>";
 		};
 		944732D41E45E887009A0D59 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				944732D51E45E89B009A0D59 /* VKService.swift */,
 				94CE3F7D1E4A6310004CF9FC /* LoginService.swift */,
+				944732D51E45E89B009A0D59 /* VKService.swift */,
 			);
-			name = Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		944732D71E460589009A0D59 /* VK */ = {
@@ -196,31 +196,30 @@
 			children = (
 				944732D81E4605A0009A0D59 /* Models */,
 			);
-			name = VK;
+			path = VK;
 			sourceTree = "<group>";
 		};
 		944732D81E4605A0009A0D59 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				944732E31E46168E009A0D59 /* Data */,
 				94E9BB761E4FB88A007AC489 /* Requests */,
 				944732E41E4616AB009A0D59 /* Transforms */,
-				944732E31E46168E009A0D59 /* Data */,
 			);
-			name = Models;
-			path = findOut;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		944732E31E46168E009A0D59 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				944732ED1E4645C0009A0D59 /* Attachment */,
 				94E9BB6F1E4FAF1F007AC489 /* Group */,
 				94E9BB6E1E4FAEF9007AC489 /* Wall */,
-				944732ED1E4645C0009A0D59 /* Attachment */,
 				944732DF1E460B92009A0D59 /* VKCommentsInfo.swift */,
 				944732E51E4616C8009A0D59 /* VKLikesInfo.swift */,
 				944732E71E463B4E009A0D59 /* VKRepostsInfo.swift */,
 			);
-			name = Data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		944732E41E4616AB009A0D59 /* Transforms */ = {
@@ -229,19 +228,19 @@
 				944732E11E461384009A0D59 /* TimeStampTransform.swift */,
 				944732F21E46496B009A0D59 /* URLTransform.swift */,
 			);
-			name = Transforms;
+			path = Transforms;
 			sourceTree = "<group>";
 		};
 		944732ED1E4645C0009A0D59 /* Attachment */ = {
 			isa = PBXGroup;
 			children = (
 				944732EB1E46421C009A0D59 /* VKAttachment.swift */,
-				944732EE1E4645D1009A0D59 /* VKPhoto.swift */,
-				944732F01E46491B009A0D59 /* VKLink.swift */,
-				94ED000B1E471F20008BA7A3 /* VKPostedPhoto.swift */,
 				94ED000D1E476E38008BA7A3 /* VKDoc.swift */,
+				944732F01E46491B009A0D59 /* VKLink.swift */,
+				944732EE1E4645D1009A0D59 /* VKPhoto.swift */,
+				94ED000B1E471F20008BA7A3 /* VKPostedPhoto.swift */,
 			);
-			name = Attachment;
+			path = Attachment;
 			sourceTree = "<group>";
 		};
 		9454D82A1E4FBFDE0019355D /* Group */ = {
@@ -250,29 +249,29 @@
 				9454D82B1E4FBFFD0019355D /* VKGroupRequest.swift */,
 				94DE011B1E4FC50F0069AABE /* VKGroupRsponse.swift */,
 			);
-			name = Group;
+			path = Group;
 			sourceTree = "<group>";
 		};
 		947F171A1E465C86007983DA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				949A870B1E48DEBB004CB2AE /* ContainerViewController.swift */,
 				94CE3F7A1E4A4DC3004CF9FC /* Launch */,
 				948C422C1E4A494B00CDA4A6 /* Login */,
 				949A87111E48E095004CB2AE /* Menu */,
 				947F171B1E465C98007983DA /* Records */,
+				949A870B1E48DEBB004CB2AE /* ContainerViewController.swift */,
 			);
-			name = Modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		947F171B1E465C98007983DA /* Records */ = {
 			isa = PBXGroup;
 			children = (
 				947F171C1E465CD6007983DA /* View */,
-				9482B8481E45152200FDB398 /* RecordsViewController.swift */,
 				947F171D1E465CEE007983DA /* RecordsModel.swift */,
+				9482B8481E45152200FDB398 /* RecordsViewController.swift */,
 			);
-			name = Records;
+			path = Records;
 			sourceTree = "<group>";
 		};
 		947F171C1E465CD6007983DA /* View */ = {
@@ -280,22 +279,22 @@
 			children = (
 				941E4E521E466D5500A8863C /* Cells */,
 				9482B84A1E45152200FDB398 /* Records.storyboard */,
-				947F171F1E465D19007983DA /* RecordsView.swift */,
 				948AE8F81E47C0F70080B0DD /* RecordsScrollView.swift */,
+				947F171F1E465D19007983DA /* RecordsView.swift */,
 				941E4E571E4670ED00A8863C /* RecordsViewModel.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		9482B83A1E45152200FDB398 = {
 			isa = PBXGroup;
 			children = (
-				94CE3F791E4A4D6D004CF9FC /* Supporting Files */,
-				9482B8451E45152200FDB398 /* findOut */,
-				944732D71E460589009A0D59 /* VK */,
-				9482B8441E45152200FDB398 /* Products */,
-				F95E70A8500AAFC013F1A963 /* Pods */,
 				86BD271847EA266518904B1E /* Frameworks */,
+				F95E70A8500AAFC013F1A963 /* Pods */,
+				9482B8441E45152200FDB398 /* Products */,
+				94CE3F791E4A4D6D004CF9FC /* Supporting Files */,
+				944732D71E460589009A0D59 /* VK */,
+				9482B8451E45152200FDB398 /* findOut */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,9 +309,9 @@
 		9482B8451E45152200FDB398 /* findOut */ = {
 			isa = PBXGroup;
 			children = (
-				944732D41E45E887009A0D59 /* Services */,
 				941E4E591E467DF700A8863C /* Common */,
 				947F171A1E465C86007983DA /* Modules */,
+				944732D41E45E887009A0D59 /* Services */,
 				9482B8461E45152200FDB398 /* AppDelegate.swift */,
 			);
 			path = findOut;
@@ -324,36 +323,36 @@
 				948C422F1E4A497C00CDA4A6 /* View */,
 				948C422D1E4A496E00CDA4A6 /* LoginViewController.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		948C422F1E4A497C00CDA4A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				948C42301E4A498D00CDA4A6 /* LoginView.swift */,
 				948C42321E4A499A00CDA4A6 /* Login.storyboard */,
+				948C42301E4A498D00CDA4A6 /* LoginView.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		949A87111E48E095004CB2AE /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				949A87121E48E0A9004CB2AE /* View */,
-				949A87131E48E0B9004CB2AE /* MenuViewController.swift */,
 				949A871E1E48EB76004CB2AE /* MenuModel.swift */,
+				949A87131E48E0B9004CB2AE /* MenuViewController.swift */,
 			);
-			name = Menu;
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		949A87121E48E0A9004CB2AE /* View */ = {
 			isa = PBXGroup;
 			children = (
 				949A871B1E48EA5A004CB2AE /* Cell */,
-				949A87151E48E652004CB2AE /* Menu.storyboard */,
 				943C33041E50EE4F001B6ADD /* MenuTableView */,
+				949A87151E48E652004CB2AE /* Menu.storyboard */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		949A871B1E48EA5A004CB2AE /* Cell */ = {
@@ -362,7 +361,7 @@
 				949A87191E48E8A4004CB2AE /* GroupCell.swift */,
 				949A87171E48E6EB004CB2AE /* GroupCell.xib */,
 			);
-			name = Cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		94CE3F791E4A4D6D004CF9FC /* Supporting Files */ = {
@@ -372,7 +371,7 @@
 				9482B8521E45152200FDB398 /* Info.plist */,
 				943C33021E50BE8B001B6ADD /* Localizable.strings */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		94CE3F7A1E4A4DC3004CF9FC /* Launch */ = {
@@ -380,7 +379,7 @@
 			children = (
 				9482B84F1E45152200FDB398 /* LaunchScreen.storyboard */,
 			);
-			name = Launch;
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		94E9BB6E1E4FAEF9007AC489 /* Wall */ = {
@@ -390,18 +389,18 @@
 				944732DD1E460853009A0D59 /* VKWallAttachment.swift */,
 				944732DB1E460685009A0D59 /* VKWallRecord.swift */,
 			);
-			name = Wall;
+			path = Wall;
 			sourceTree = "<group>";
 		};
 		94E9BB6F1E4FAF1F007AC489 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				943C32FD1E50BA9D001B6ADD /* VKAgeLimit.swift */,
 				94E9BB701E4FAF5A007AC489 /* VKGroup.swift */,
 				94E9BB721E4FB5ED007AC489 /* VKGroupMembers.swift */,
 				943C32FB1E50BA29001B6ADD /* VKGroupType.swift */,
-				943C32FD1E50BA9D001B6ADD /* VKAgeLimit.swift */,
 			);
-			name = Group;
+			path = Group;
 			sourceTree = "<group>";
 		};
 		94E9BB761E4FB88A007AC489 /* Requests */ = {
@@ -410,16 +409,16 @@
 				9454D82A1E4FBFDE0019355D /* Group */,
 				94E9BB771E4FB89F007AC489 /* Wall */,
 			);
-			name = Requests;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		94E9BB771E4FB89F007AC489 /* Wall */ = {
 			isa = PBXGroup;
 			children = (
-				944732D91E4605D2009A0D59 /* VKWallResponse.swift */,
 				94E9BB741E4FB840007AC489 /* VKWallRequest.swift */,
+				944732D91E4605D2009A0D59 /* VKWallResponse.swift */,
 			);
-			name = Wall;
+			path = Wall;
 			sourceTree = "<group>";
 		};
 		F95E70A8500AAFC013F1A963 /* Pods */ = {
@@ -634,6 +633,7 @@
 				9482B84B1E45152200FDB398 /* Base */,
 			);
 			name = Records.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		9482B84F1E45152200FDB398 /* LaunchScreen.storyboard */ = {
@@ -642,6 +642,7 @@
 				9482B8501E45152200FDB398 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -745,7 +746,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HQ576M92UA;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = findOut/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.none.eggApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -760,7 +761,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HQ576M92UA;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = findOut/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.none.eggApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
