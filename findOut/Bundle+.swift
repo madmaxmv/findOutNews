@@ -9,11 +9,11 @@
 import Foundation
 
 extension Bundle {
-    func value<T>(forKey key: String, defVal: T? = nil) -> T? {
-        if let res = self.object(forInfoDictionaryKey: key) as? T {
+    func value<T>(forKey key: String, default: T? = nil) -> T? {
+        if let res = object(forInfoDictionaryKey: key) as? T {
             return res
         }
-        return defVal
+        return `default`
     }
 
     func loadNib<T>(named name: String) -> T {

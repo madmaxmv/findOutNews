@@ -27,7 +27,10 @@ target ‘findOut’ do
     pod 'RxCocoa',    '~> 3.0'
     pod 'RxBlocking', '~> 3.0'
     pod 'RxDataSources', '~> 1.0'
-    
+
+    # Отображение и кеширование картинок.
+    pod 'Imaginary', '~> 1.0'
+
     # вспомогательные методы для асинхронного выполнения задач
     pod 'AsyncSwift', '~> 2.0'
 end

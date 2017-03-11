@@ -52,8 +52,8 @@ class VKService: NSObject {
         )
     }
 
-    func getGroupInfo(onSuccess: @escaping (VKGroupResponse) -> Void) {
-        VKGroupRequest(groupId: 26030283, fields: ["activity", "description", "status", "city", "age_limits", "members_count"])
+    func getGroupInfo(groupIds: [Int], onSuccess: @escaping (VKGroupResponse) -> Void) {
+        VKGroupRequest(groupIds: groupIds, fields: ["activity", "description", "status", "city", "age_limits", "members_count"])
             .execute(onSuccess: { response in
                 onSuccess(response)
             }, onError: { error in print(error) }

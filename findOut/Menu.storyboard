@@ -12,7 +12,7 @@
         <!--Left View Controller-->
         <scene sceneID="V8c-5x-6Ij">
             <objects>
-                <viewController restorationIdentifier="MenuTableViewController" storyboardIdentifier="MenuTableViewController" title="Left View Controller" id="WJH-JC-hxh" customClass="MenuViewController" customModule="findOut" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MenuViewController" storyboardIdentifier="MenuViewController" title="Left View Controller" id="WJH-JC-hxh" customClass="MenuViewController" customModule="findOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b7r-bJ-5jC"/>
                         <viewControllerLayoutGuide type="bottom" id="U37-f9-tAU"/>
@@ -24,7 +24,7 @@
                             <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="wjx-UP-7C2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доступные группы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wau-Px-1Jr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On the Wall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wau-Px-1Jr">
                                         <rect key="frame" x="12" y="24.5" width="291" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,70 +61,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yth-fy-2QL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1609" y="-435"/>
-        </scene>
-        <!--Left View Controller-->
-        <scene sceneID="RC2-Hh-IsO">
-            <objects>
-                <viewController restorationIdentifier="MenuViewController" storyboardIdentifier="MenuViewController" title="Left View Controller" id="CM0-Ff-LZY" customClass="MenuViewController" customModule="findOut" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xkd-WL-ja2"/>
-                        <viewControllerLayoutGuide type="bottom" id="KQH-YV-gLd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CeA-bB-Jho" customClass="MenuView" customModule="findOut" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-rJ-bgU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доступные группы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="nqm-xC-m3Y">
-                                        <rect key="frame" x="12" y="24" width="291" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.59215686270000001" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="nqm-xC-m3Y" firstAttribute="centerY" secondItem="Daq-rJ-bgU" secondAttribute="centerY" constant="10" id="Mut-yy-VPZ"/>
-                                    <constraint firstAttribute="height" constant="64" id="iFL-lf-1dD"/>
-                                    <constraint firstAttribute="trailing" secondItem="nqm-xC-m3Y" secondAttribute="trailing" constant="72" id="kgt-JU-aAc"/>
-                                    <constraint firstItem="nqm-xC-m3Y" firstAttribute="leading" secondItem="Daq-rJ-bgU" secondAttribute="leading" constant="12" id="tti-ki-SBJ"/>
-                                </constraints>
-                            </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92g-T5-Gza">
-                                <rect key="frame" x="0.0" y="64" width="315" height="563"/>
-                            </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="KpG-oG-32B">
-                                <rect key="frame" x="12" y="627" width="291" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4oJ-NH-IfO"/>
-                                </constraints>
-                                <color key="pageIndicatorTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </pageControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KQH-YV-gLd" firstAttribute="top" secondItem="KpG-oG-32B" secondAttribute="bottom" constant="10" id="6n5-yV-Gaz"/>
-                            <constraint firstItem="KpG-oG-32B" firstAttribute="top" secondItem="92g-T5-Gza" secondAttribute="bottom" id="CIX-vG-KNU"/>
-                            <constraint firstAttribute="trailing" secondItem="92g-T5-Gza" secondAttribute="trailing" constant="60" id="DJm-VS-YqT"/>
-                            <constraint firstItem="Daq-rJ-bgU" firstAttribute="leading" secondItem="CeA-bB-Jho" secondAttribute="leading" id="FJl-30-ZmW"/>
-                            <constraint firstAttribute="trailing" secondItem="Daq-rJ-bgU" secondAttribute="trailing" id="WS3-bC-wnf"/>
-                            <constraint firstItem="Daq-rJ-bgU" firstAttribute="top" secondItem="CeA-bB-Jho" secondAttribute="top" id="Zh2-Ob-aIv"/>
-                            <constraint firstItem="92g-T5-Gza" firstAttribute="leading" secondItem="CeA-bB-Jho" secondAttribute="leading" id="dTZ-6j-Tdc"/>
-                            <constraint firstAttribute="trailing" secondItem="KpG-oG-32B" secondAttribute="trailing" constant="72" id="dqw-KT-3Hl"/>
-                            <constraint firstItem="92g-T5-Gza" firstAttribute="top" secondItem="Daq-rJ-bgU" secondAttribute="bottom" id="gEo-av-Mht"/>
-                            <constraint firstItem="KpG-oG-32B" firstAttribute="leading" secondItem="CeA-bB-Jho" secondAttribute="leading" constant="12" id="qaA-wL-0ek"/>
-                        </constraints>
-                        <connections>
-                            <outlet property="scrollView" destination="92g-T5-Gza" id="WtK-FR-Rj5"/>
-                        </connections>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lud-dr-efN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1610" y="240"/>
         </scene>
     </scenes>
 </document>

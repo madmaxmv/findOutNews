@@ -7,28 +7,30 @@
 //
 
 import RxSwift
+import Async
 
 struct Group {
-    let name: String
-    var isSelected: Bool
+    let value: VKGroup
+    let isSelected: Bool
 }
 
 class MenuModel {
     public static let instance = MenuModel()
     private init() {
         loading.onNext(true)
-        VKService.instance.getGroupInfo { info in
-            self.groups = info.groups
+        VKService.instance.getGroupInfo(groupIds: groupsIds) { [unowned self] info in
+            info.groups.forEach {
+                self.groups.append(Group(value: $0, isSelected: false))
+            }
             self.loading.onNext(false)
         }
     }
     public let loading = PublishSubject<Bool>()
-    public var groups: [VKGroup] = []
-//    public var groups = [
-//        Group(name: "Вконтакте dev", isSelected: false),
-//        Group(name: "Habrahabr", isSelected: true),
-//        Group(name: "ТП", isSelected: true),
-//        Group(name: "Подслушано", isSelected: false),
-//        Group(name: "/dev/null", isSelected: true),
-//    ]
+    public var groups: [Group] = []
+    public var groupsIds = [
+        34215577,
+        129636704,
+        30666517,
+        57958529
+    ]
 }

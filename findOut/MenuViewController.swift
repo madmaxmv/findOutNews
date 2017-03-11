@@ -16,11 +16,8 @@ class MenuViewController: UIViewController {
         return view as! MenuTableView
     }
 
-    private var menuView: MenuView {
-        return view as! MenuView
-    }
-
     var model = MenuModel.instance
+    var viewModel = MenuTableViewModel()
     weak var delegate: ContainerViewController?
 
     private let disposeBag = DisposeBag()
@@ -30,11 +27,11 @@ class MenuViewController: UIViewController {
 
         model.loading.subscribe(onNext: { [unowned self] isLoading in
             if !isLoading && !self.model.groups.isEmpty {
-                self.menuView.setup(for: MenuViewModel(groups: self.model.groups))
+                self.viewModel.updateGroups(groups: self.model.groups)
             }
         }).addDisposableTo(disposeBag)
 
-        //menuTableView.setup(for: MenuTableViewModel(groups: model.groups))
+        menuTableView.setup(for: viewModel)
     }
 
 }

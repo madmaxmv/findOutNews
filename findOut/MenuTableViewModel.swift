@@ -19,18 +19,16 @@ class MenuTableViewModel {
         case group
     }
 
-    typealias Row = (type: RowType, value: Any?)
+    typealias Row = (type: RowType, value: Group)
     typealias Section = (type: SectionType, rows: [Row])
 
     public var dataSource = Variable<[SectionModel<MenuTableViewModel.SectionType, MenuTableViewModel.Row>]>([])
 
-    public init(groups: [Group]) {
+    func updateGroups(groups: [Group]) {
         dataSource.value = [
             SectionModel(model: .groups,
                          items: groups.map { group in
-                            return (type: .group,
-                                    value: GroupCell.Model(groupName: group.name,
-                                                           isSelected: group.isSelected) as? Any)
+                            return (type: .group, value: group)
             })
         ]
     }

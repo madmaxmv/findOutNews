@@ -33,7 +33,7 @@ class MenuTableView: UIView {
             switch item.type {
             case .group:
                 let cell = tableView.dequeueReusableCell(for: indexPath) as GroupCell
-                cell.setup(for: item.value as! GroupCell.Model)
+                cell.setup(for: item.value)
                 return cell
             }
         }

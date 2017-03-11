@@ -91,7 +91,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Agrume/Agrume.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CryptoSwift/CryptoSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/HockeySDK-Source/HockeySDK_Source.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Imaginary/Imaginary.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KeychainSwift/KeychainSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"
@@ -103,7 +106,10 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Agrume/Agrume.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CryptoSwift/CryptoSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/HockeySDK-Source/HockeySDK_Source.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Imaginary/Imaginary.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KeychainSwift/KeychainSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"

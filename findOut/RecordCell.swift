@@ -8,18 +8,10 @@
 
 import UIKit
 import RxSwift
-import RxCocoa
 import Agrume
-import Async
+import Imaginary
 
 class RecordCell: UITableViewCell {
-
-    struct Model {
-        let title: String
-        let url: URL?
-        let repostsCount: Int
-        let likesCount: Int
-    }
 
     @IBOutlet weak var cellContentView: UIView!
 
@@ -42,7 +34,6 @@ class RecordCell: UITableViewCell {
     weak var controller: UIViewController?
 
     var cellImage = PublishSubject<UIImage?>()
-    private var disposeBag = DisposeBag()
 
     public func setup(for record: VKWallRecord) {
 
@@ -57,15 +48,7 @@ class RecordCell: UITableViewCell {
         for attachment in record.attachments ?? [] {
             switch attachment.attachment {
             case .photo(let photo):
-                if let url = photo.photo604 {
-                    Async.background { [weak self] in
-                        do {
-                            if let imageData = try? Data(contentsOf: url) {
-                                self?.cellImage.onNext(UIImage(data: imageData))
-                            }
-                        }
-                    }
-                }
+                recordImageView.setImage(url: photo.photo604)
                 if photo.width > 0 {
                     let height = CGFloat(photo.height) * UIScreen.main.bounds.width / CGFloat(photo.width)
                     recordImageHeight.constant = height
@@ -73,15 +56,6 @@ class RecordCell: UITableViewCell {
             default: break
             }
         }
-
-        cellImage
-            .subscribe(onNext: { [weak self] image in
-                Async.main {
-                    if let imgView = self?.recordImageView, let image = image {
-                        imgView.image = image
-                    }
-                }
-        }).addDisposableTo(disposeBag)
 
         backgroundColor = UIColor.clear
 
@@ -111,9 +85,5 @@ class RecordCell: UITableViewCell {
                                 backgroundColor: UIColor.black)
             agrume.showFrom(controller)
         }
-    }
-
-    override func prepareForReuse() {
-        disposeBag = DisposeBag()
     }
 }
